@@ -19,7 +19,7 @@ class RegisterModel extends Model
      */
     public function register(): string
     {
-        echo 'creating user';
+        echo '<h1 style="color: forestgreen">creating user</h1>';
     }
 
     /**

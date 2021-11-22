@@ -85,7 +85,9 @@ abstract class Model
         $this->errors[$attribute][] = $message;
     }
 
-
+    /**
+     * @return string[]
+     */
     public function errorMessages()
     {
         return [
@@ -104,6 +106,6 @@ abstract class Model
 
     public function getFirstError($attribute)
     {
-
+        return $this->errors[$attribute][0] ?? false;
     }
 }
