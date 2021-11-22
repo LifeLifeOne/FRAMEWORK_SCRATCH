@@ -10,7 +10,6 @@ class Controller
      * Return the view in parameter with params
      * @param string $view
      * @param array $params
-     * @return void
      */
     public function view(string $view, array $params = [])
     {

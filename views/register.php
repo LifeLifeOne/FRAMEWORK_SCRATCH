@@ -2,7 +2,8 @@
 <form action="" method="post">
     <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" id="email">
+        <input type="email" value=""
+               class="form-control" name="email" id="email">
     </div>
     <div class="mb-3">
         <label for="password" class="form-label">Password</label>

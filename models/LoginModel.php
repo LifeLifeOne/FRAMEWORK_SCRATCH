@@ -10,15 +10,21 @@ use App\core\Model;
  */
 class LoginModel extends Model
 {
-    public $email;
-    public $password;
+    public string $email;
+    public string $password;
 
-    public function login()
+    /**
+     * @return string
+     */
+    public function login(): string
     {
         echo "Login Success";
     }
 
-    public function rules()
+    /**
+     * @return array[]
+     */
+    public function rules(): array
     {
         return [
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
