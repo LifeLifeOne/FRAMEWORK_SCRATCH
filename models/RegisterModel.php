@@ -10,16 +10,19 @@ use App\core\Model;
  */
 class RegisterModel extends Model
 {
-    public $email;
-    public $password;
-    public $confirmPassword;
+    public string $email;
+    public string $password;
+    public string $confirmPassword;
 
     public function register()
     {
         echo "creating user";
     }
 
-    public function rules()
+    /**
+     * @return array[]
+     */
+    public function rules(): array
     {
         return [
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],

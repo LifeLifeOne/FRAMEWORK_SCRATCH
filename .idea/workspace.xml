@@ -12,6 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ab89644c-b081-40b7-b03a-37c5044df7a4" name="Default Changelist" comment="Update Project Framework MVC">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/RegisterModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/RegisterModel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +70,7 @@
       <workItem from="1637590571206" duration="551000" />
       <workItem from="1637591808274" duration="233000" />
       <workItem from="1637592055055" duration="25000" />
-      <workItem from="1637592092320" duration="985000" />
+      <workItem from="1637592092320" duration="1739000" />
     </task>
     <task id="LOCAL-00001" summary="Update Project Framework MVC">
       <created>1637589039511</created>
