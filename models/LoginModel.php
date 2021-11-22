@@ -13,7 +13,7 @@ class LoginModel extends Model
     public $email;
     public $password;
 
-    public function register()
+    public function login()
     {
         echo "Login Success";
     }

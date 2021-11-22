@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/FRAMEWORK_SCRATCH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FRAMEWORK_SCRATCH.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AuthController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
       <workItem from="1637589452673" duration="193000" />
       <workItem from="1637589680310" duration="139000" />
       <workItem from="1637589942107" duration="603000" />
-      <workItem from="1637590867320" duration="1241000" />
+      <workItem from="1637590867320" duration="1665000" />
     </task>
     <task id="LOCAL-00001" summary="Update Project Framework MVC">
       <created>1637589039511</created>
