@@ -1,17 +1,13 @@
 <h3>Register</h3>
-<form action="" method="post">
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" id="email">
-    </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" name="password" id="password">
-    </div>
-    <div class="mb-3">
-        <label for="confirmPassword" class="form-label">Confirm password</label>
-        <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
-    </div>
-    <button type="submit" class="btn btn-primary">Register</button>
-    <a href="/login">already signUp ?</a>
-</form>
+<?php $form = \App\core\form\Form::begin('', "post") ?>
+
+<?php echo $form->field($model, 'email') ?>
+<?php echo $form->field($model, 'password')->passwordField() ?>
+<?php echo $form->field($model, 'confirmPassword')->passwordField() ?>
+
+<br>
+<button type="submit" class="btn btn-primary">Register</button>
+<br>
+<a href="/login">already signUp ?</a>
+
+<?php echo \app\core\form\Form::end() ?>

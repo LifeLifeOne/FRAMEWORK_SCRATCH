@@ -10,19 +10,28 @@ use App\core\Model;
  */
 class LoginModel extends Model
 {
-    public $email;
-    public $password;
+    public string $email = "";
+    public string $password = "";
+
 
     public function login()
     {
-        echo "Login Success";
+       echo '
+            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+              <strong>Logged to your account</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        ';
     }
 
-    public function rules()
+    /**
+     * @return array[]
+     */
+    public function rules(): array
     {
         return [
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
-            'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 3], [self::RULE_MAX, 'max' => 20]]
+            'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8], [self::RULE_MAX, 'max' => 20]]
         ];
     }
 }

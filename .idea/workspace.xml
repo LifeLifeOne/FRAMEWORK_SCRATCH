@@ -10,13 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab89644c-b081-40b7-b03a-37c5044df7a4" name="Default Changelist" comment="Update Project Framework MVC">
-      <change beforePath="$PROJECT_DIR$/.idea/FRAMEWORK_SCRATCH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FRAMEWORK_SCRATCH.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="ab89644c-b081-40b7-b03a-37c5044df7a4" name="Default Changelist" comment="errors messages working">
+      <change afterPath="$PROJECT_DIR$/core/form/Field.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/form/Form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Request.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/LoginModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/LoginModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/RegisterModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/RegisterModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,6 +76,8 @@
       <workItem from="1637591808274" duration="233000" />
       <workItem from="1637592055055" duration="25000" />
       <workItem from="1637592092320" duration="696000" />
+      <workItem from="1637598519206" duration="996000" />
+      <workItem from="1637599535538" duration="7550000" />
     </task>
     <task id="LOCAL-00001" summary="Update Project Framework MVC">
       <created>1637589039511</created>
@@ -82,7 +86,28 @@
       <option name="project" value="LOCAL" />
       <updated>1637589039511</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update Project Framework MVC">
+      <created>1637598942095</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637598942095</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Try to repare error match message">
+      <created>1637603043620</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637603043620</updated>
+    </task>
+    <task id="LOCAL-00004" summary="errors messages working">
+      <created>1637603674074</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637603674074</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +128,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add model" />
     <MESSAGE value="Update Project Framework MVC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Project Framework MVC" />
+    <MESSAGE value="Try to repare error match message" />
+    <MESSAGE value="errors messages working" />
+    <option name="LAST_COMMIT_MESSAGE" value="errors messages working" />
   </component>
 </project>
