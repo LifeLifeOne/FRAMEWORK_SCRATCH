@@ -14,9 +14,7 @@ class Application
     public Response $response;
 
     /**
-     * Application constructor.
-     * @param string $rootDir
-     * @return void
+     * @param string $rootPath
      */
     public function __construct(string $rootPath)
     {
@@ -28,7 +26,6 @@ class Application
     }
 
     /**
-     * resolve the application routes
      * @return void
      */
     public function run()
