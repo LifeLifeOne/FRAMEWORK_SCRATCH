@@ -10,7 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab89644c-b081-40b7-b03a-37c5044df7a4" name="Default Changelist" comment="Update Project Framework MVC" />
+    <list default="true" id="ab89644c-b081-40b7-b03a-37c5044df7a4" name="Default Changelist" comment="Update Project Framework MVC">
+      <change beforePath="$PROJECT_DIR$/.idea/FRAMEWORK_SCRATCH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FRAMEWORK_SCRATCH.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/LoginModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/LoginModel.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,10 +48,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -60,6 +70,10 @@
       <workItem from="1637589452673" duration="193000" />
       <workItem from="1637589680310" duration="139000" />
       <workItem from="1637589942107" duration="603000" />
+      <workItem from="1637590571206" duration="551000" />
+      <workItem from="1637591808274" duration="233000" />
+      <workItem from="1637592055055" duration="25000" />
+      <workItem from="1637592092320" duration="696000" />
     </task>
     <task id="LOCAL-00001" summary="Update Project Framework MVC">
       <created>1637589039511</created>
@@ -72,7 +86,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -90,35 +104,5 @@
     <MESSAGE value="add model" />
     <MESSAGE value="Update Project Framework MVC" />
     <option name="LAST_COMMIT_MESSAGE" value="Update Project Framework MVC" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="626" y="243" key="#Notifications" timestamp="1637590348208">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="626" y="243" key="#Notifications/0.0.1536.816/1920.0.2560.1032@0.0.1536.816" timestamp="1637590348208" />
-    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser" timestamp="1637580317649">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816/1920.0.2560.1032@0.0.1536.816" timestamp="1637580317649" />
-    <state x="470" y="81" key="NewPhpClassDialog" timestamp="1637579300157">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="470" y="81" key="NewPhpClassDialog/0.0.1536.816/1920.0.2560.1032@0.0.1536.816" timestamp="1637579300157" />
-    <state x="559" y="315" key="NewPhpFileDialog" timestamp="1637588173438">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="559" y="315" key="NewPhpFileDialog/0.0.1536.816/1920.0.2560.1032@0.0.1536.816" timestamp="1637588173438" />
-    <state x="160" y="0" key="SettingsEditor" timestamp="1637589621773">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="160" y="0" key="SettingsEditor/0.0.1536.816/1920.0.2560.1032@0.0.1536.816" timestamp="1637589621773" />
-    <state x="261" y="77" key="Vcs.Push.Dialog.v2" timestamp="1637590326065">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="261" y="77" key="Vcs.Push.Dialog.v2/0.0.1536.816/1920.0.2560.1032@0.0.1536.816" timestamp="1637590326065" />
-    <state x="446" y="288" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1637590155818">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="446" y="288" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.816/1920.0.2560.1032@0.0.1536.816" timestamp="1637590155818" />
   </component>
 </project>

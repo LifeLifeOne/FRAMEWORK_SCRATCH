@@ -25,7 +25,7 @@ class Request
      */
     public function getMethod()
     {
-        return strtolower($_SERVER['REQUEST_METHOD']) ?? 'get';
+        return strtolower($_SERVER['REQUEST_METHOD']) ?? 'get'; // ?-> 'get'
     }
 
     /**
