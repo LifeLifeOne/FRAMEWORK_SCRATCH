@@ -14,12 +14,15 @@ class RegisterModel extends Model
     public string $password = '';
     public string $confirmPassword = '';
 
-    /**
-     * @return string
-     */
-    public function register(): string
+
+    public function register()
     {
-        echo '<h1 style="color: forestgreen">creating user</h1>';
+        echo '
+            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+              <strong>Account created</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        ';
     }
 
     /**
@@ -29,7 +32,7 @@ class RegisterModel extends Model
     {
         return [
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
-            'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 3], [self::RULE_MAX, 'max' => 20]],
+            'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8], [self::RULE_MAX, 'max' => 20]],
             'confirmPassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']],
         ];
     }

@@ -22,13 +22,8 @@ class AuthController extends Controller
             $loginModel->loadData($request->getBody());
 
             if ($loginModel->validate() && $loginModel->login()) {
-                return 'Success';
+                $loginModel->login();
             }
-
-            echo "<pre>";
-            var_dump($loginModel->errors);
-            echo "</pre>";
-            exit;
 
             return $this->view('login', [
                 'model' => $loginModel
@@ -52,7 +47,7 @@ class AuthController extends Controller
             $registerModel->loadData($request->getBody());
 
             if ($registerModel->validate() && $registerModel->register()) {
-                return 'Success';
+                $registerModel->register();
             }
 
             return $this->view("register", [
