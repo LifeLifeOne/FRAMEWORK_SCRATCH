@@ -9,19 +9,12 @@ use App\models\LoginModel;
 
 class AuthController extends Controller
 {
-    /**
-     * @return string|void
-     */
-    public function login(): string
-    {
-        return $this->view('login');
-    }
 
     /**
      * @param Request $request
      * @return string|void
      */
-    public function handleLogin(Request $request)
+    public function login(Request $request)
     {
         $loginModel = new LoginModel();
         if ($request->isPost()) {
@@ -51,15 +44,7 @@ class AuthController extends Controller
      * @param Request $request
      * @return string|void
      */
-    public function register(Request $request): string
-    {
-        return $this->view('register');
-    }
-
-    /**
-     * Handle submitted contact form
-     */
-    public function handleRegister(Request $request)
+    public function register(Request $request)
     {
         $registerModel = new RegisterModel();
         if ($request->isPost()) {
@@ -69,10 +54,14 @@ class AuthController extends Controller
             if ($registerModel->validate() && $registerModel->register()) {
                 return 'Success';
             }
-            
 
-            return $this->view('register', [
-                'model' => $registerModel
+            echo "<pre>";
+            var_dump($registerModel->errors);
+            echo "</pre>";
+            exit;
+
+            return $this->view("register", [
+                "model" => $registerModel
             ]);
         }
 

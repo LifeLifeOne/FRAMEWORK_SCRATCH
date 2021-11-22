@@ -8,8 +8,9 @@ class Controller
 {
     /**
      * Return the view in parameter with params
-     * @param string $view
+     * @param $view
      * @param array $params
+     * @return array|string|string[]
      */
     public function view(string $view, array $params = [])
     {

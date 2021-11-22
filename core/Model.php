@@ -27,8 +27,14 @@ abstract class Model
         }
     }
 
+    /**
+     * @return array
+     */
     abstract public function rules(): array;
 
+    /**
+     * @var array
+     */
     public array $errors = [];
 
     /**
@@ -66,38 +72,31 @@ abstract class Model
     }
 
     /**
-     * @param String $attribute
-     * @param String $rule
+     * @param string $attribute
+     * @param string $rule
      * @param array $params
      */
-    public function addError(String $attribute, String $rule, array $params = [])
+    public function addError(string $attribute, string $rule, array $params = [])
     {
-        $message = $this->errorMessages()[$rule];
+        $message = $this->errorMessages()[$rule] ?? '';
         foreach ($params as $key => $value) {
              $message = str_replace("{{$key}}", $value, $message);
         }
         $this->errors[$attribute][] = $message;
     }
 
-    /**
-     * @return array
-     */
-    public function errorMessages(): array
+
+    public function errorMessages()
     {
         return [
             self::RULE_REQUIRED => 'This field is required',
             self::RULE_EMAIL => 'This field must be a valid email',
             self::RULE_MIN => 'Min length of this field must be {min}',
             self::RULE_MAX => 'Max length of this field must be {max}',
-            self::RULE_MATCH => 'This field must be the same as {match}'
+            self::RULE_MATCH => 'This field must be the same as {match}',
         ];
     }
 
-    /**
-     * @param $attribute
-     * @return false|mixed
-     *
-     */
     public function hasError($attribute)
     {
         return $this->errors[$attribute] ?? false;

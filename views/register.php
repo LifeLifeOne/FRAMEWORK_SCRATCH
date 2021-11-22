@@ -1,8 +1,14 @@
+
+<?php
+if (isset($model)) {
+    var_dump($model->email);
+}
+?>
 <h3>Register</h3>
 <form action="" method="post">
     <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" value=""
+        <input type="email" value="<?= $model->email ?>"
                class="form-control" name="email" id="email">
     </div>
     <div class="mb-3">
@@ -14,5 +20,6 @@
         <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
+    <br>
     <a href="/login">already signUp ?</a>
 </form>

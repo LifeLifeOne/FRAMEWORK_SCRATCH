@@ -12,17 +12,19 @@ class SiteController extends Controller
     /**
      * @return string
      */
-    public function welcome()
+    public function welcome(): string
     {
-        return $this->view('welcome', [
-            "firstName" => "test"
-        ]);
+        $params = [
+            "firstName" => "test 2"
+        ];
+
+        return $this->view('welcome', $params);
     }
 
     /**
      * @return string
      */
-    public function contact()
+    public function contact(): string
     {
         return $this->view('contact');
     }

@@ -10,16 +10,16 @@ use App\core\Model;
  */
 class RegisterModel extends Model
 {
-    public $email;
-    public $password;
-    public $confirmPassword;
+    public string $email = '';
+    public string $password = '';
+    public string $confirmPassword = '';
 
     /**
      * @return string
      */
     public function register(): string
     {
-        echo "creating user";
+        echo 'creating user';
     }
 
     /**
