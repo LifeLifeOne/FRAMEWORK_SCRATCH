@@ -25,25 +25,34 @@ class Request
      */
     public function getMethod()
     {
-        return strtolower($_SERVER['REQUEST_METHOD']) ?? 'get'; // ?-> 'get'
+        return strtolower($_SERVER['REQUEST_METHOD']); //?? 'get'; // ?-> 'get'
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPost(): bool
+    {
+        return $this->getMethod() === 'post';
+    }
+
+    /**
+     * @return bool
+     */
+    public function isGet(): bool
+    {
+        return $this->getMethod() === 'get';
     }
 
     /**
      * return the request body
      * @return array
      */
-    public function getBody()
+    public function getBody(): array
     {
         $body = [];
         if ($this->getMethod() === 'post') {
-//            foreach ($_POST as $key => $value) {
-//                if ($key == 'email') {
-//                    $body['email'] = filter_var($key, FILTER_SANITIZE_EMAIL);
-//                    $body['email'] = filter_var($key, FILTER_VALIDATE_EMAIL);
-//                }
-//                $body[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
-//            }
-            foreach ($_GET as $key => $value) {
+            foreach ($_POST as $key => $value) {
                 $body[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
         }
@@ -55,11 +64,4 @@ class Request
         return $body;
     }
 
-    /**
-     * @return bool
-     */
-    public function isPost() {
-        if ($_POST)
-        return true;
-    }
 }

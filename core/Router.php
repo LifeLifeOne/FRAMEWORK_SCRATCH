@@ -47,8 +47,7 @@ class Router
     }
 
     /**
-     * resolve the request with approriate callback
-     * @return callable|string
+     * @return false|mixed|string
      */
     public function resolve()
     {
@@ -72,11 +71,11 @@ class Router
     }
 
     /**
-     * render view
      * @param string $view
-     * @return string
+     * @param array $params
+     * @return array|string|string[]
      */
-    public function renderView($view, $params = [])
+    public function renderView(string $view, array $params = [])
     {
         $layoutContent = $this->layoutContent();
         $viewContent = $this->viewContent($view, $params);
@@ -84,8 +83,7 @@ class Router
     }
 
     /**
-     * get layout content
-     * @return string
+     * @return false|string
      */
     public function layoutContent()
     {
@@ -95,17 +93,12 @@ class Router
     }
 
     /**
-     * get view content
-     * @param string $view
-     * @return string
+     * @param $view
+     * @param $params
+     * @return false|string
      */
     public function viewContent($view, $params)
     {
-        // ------------- solution 1
-        // foreach ($params as $key => $value) {
-        //     $$key = $value;
-        // }
-        // --------------solution 2
         extract($params);
         ob_start();
         include_once Application::$ROOT_DIR . "/views/{$view}.php";

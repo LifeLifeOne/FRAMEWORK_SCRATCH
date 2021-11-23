@@ -8,30 +8,29 @@ use App\Core\Application;
 
 class SiteController extends Controller
 {
+
     /**
-     * show welcome page
-     * @return view
+     * @return string
      */
-    public function welcome()
+    public function welcome(): string
     {
         $params = [
-            'username' => "houcem",
-            'email' => "hedhoucem@gmail.com",
-            'skills' => ['PHP', 'Symfony', 'JavaScript', 'HTML', 'CSS']
+            "firstName" => "test 2"
         ];
+
         return $this->view('welcome', $params);
     }
+
     /**
-     * show contact form
-     * @return view
+     * @return string
      */
-    public function contact()
+    public function contact(): string
     {
         return $this->view('contact');
     }
 
     /**
-     * Handle submitted contact form
+     * @param Request $request
      */
     public function handleContact(Request $request)
     {
