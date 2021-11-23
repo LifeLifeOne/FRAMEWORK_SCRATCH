@@ -6,16 +6,19 @@
         <div class="mb-3">
             <label for="subject" class="form-label col-sm-2">Subject</label>
             <input type="text" class="form-control bg-white" name="subject" id="subject">
+            <div class="invalid-feedback">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
             <input type="email" class="form-control  bg-white" name="email" id="email">
+            <div class="invalid-feedback">
         </div>
         <div class= " mb-3">
             <label for="message" class="form-label">Message</label>
             <textarea class="form-control bg-white" name="message" id="message"></textarea>
+            <div class="invalid-feedback">
         </div>
-        <button type="submit" class="btn btn-warning">Submit</button>
+        <button type="submit" class="btn btn-warning m-2">Submit</button>
         <a href="/"  class="btn btn-danger">Cancel</a>
     </form>
 

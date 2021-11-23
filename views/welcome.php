@@ -19,7 +19,8 @@
                             <img src="asset/img/agrougrou.jpg" class="card-img-top " alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"></h5>
-                                <p class="card-text">Ses connaissances et sa maitrise de GitHUb on fait de lui un veritable Scrum master de cet team</p>
+                                <p class="card-text">Ses connaissances et sa maitrise de GitHUb  on fait de lui le veritable Scrum master de cet team. Toujours disponible pour les autres menbres
+                                Sa bonne humeur </p>
                             </div>
                         </div>
                     </div>
@@ -48,7 +49,7 @@
                             <img src="asset/img/avatar_vivien.png" class="card-img-top"  alt="photo-profil">
                             <div class="card-body">
                                 <h5 class="card-title"></h5>
-                                <p class="card-text"> Lead technique de cette équipe c'est lui qui va mettre les fonctionalitées complexes en place.C'est aussi lui qui s'occupera des revues de code D'Agnès </p>
+                                <p class="card-text"> Lead technique (Après un certain nombre de cafés) de cette équipe c'est lui qui va mettre les fonctionalitées complexes en place. C'est aussi lui qui s'occupera des revues de code D'Agnès.</p>
                             </div>
                         </div>
                     </div>
