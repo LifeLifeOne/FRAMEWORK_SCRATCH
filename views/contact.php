@@ -1,7 +1,6 @@
 <h3 class="text-grey text-center ">Contact Us</h3>
 
 <?php $form = \App\core\form\Form::begin('', "post") ?>
-
 <?php echo $form->field($model, 'subject') ?>
 <?php echo $form->field($model, 'email') ?>
 <?php echo $form->field($model, 'message') ?>
