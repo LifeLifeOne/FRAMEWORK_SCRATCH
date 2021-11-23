@@ -3,6 +3,7 @@
 namespace App\models;
 
 use App\core\Model;
+use App\Core\Connexion;
 
 /**
  * Class RegisterModel
@@ -13,6 +14,12 @@ class RegisterModel extends Model
     public $email;
     public $password;
     public $confirmPassword;
+    public $_connexion;
+
+    public function __construct($connexion)
+    {
+        $this->_connexion = $connexion;
+    }
 
     public function register()
     {
