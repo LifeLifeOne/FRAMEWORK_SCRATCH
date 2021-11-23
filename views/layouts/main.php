@@ -54,10 +54,10 @@
     {{ content }}
   </main>
 
-  <footer class="border-top">
+  <footer class="border-top mt-2">
       <div class="container px-4 px-lg-5">
           <div class="row gx-4 gx-lg-5 justify-content-center">
-              <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="col-md-10 col-lg-8 col-xl-7 pt-2 mt-2">
                   <ul class="list-inline text-center">
                       <li class="list-inline-item">
                           <a href="#!">
