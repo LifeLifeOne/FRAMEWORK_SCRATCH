@@ -2,27 +2,28 @@
 
 namespace App\models;
 
-use App\core\Model;
+use App\Core\DbModel;
 
 /**
  * Class RegisterModel
  * @package App\models
  */
-class RegisterModel extends Model
+class UserModel extends DbModel
 {
 
     public string $email = '';
     public string $password = '';
     public string $confirmPassword = '';
 
-    public function register()
+    public function tablename(): string
     {
-        echo '
-            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-              <strong>Account created</strong>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        ';
+        return 'users';
+    }
+
+    public function save()
+    {
+        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        return parent::save();
     }
 
     /**
@@ -35,5 +36,10 @@ class RegisterModel extends Model
             'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8], [self::RULE_MAX, 'max' => 20]],
             'confirmPassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']],
         ];
+    }
+
+    public function attributes(): array
+    {
+        return ['email', 'password'];
     }
 }

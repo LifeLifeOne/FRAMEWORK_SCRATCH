@@ -17,7 +17,6 @@ class LoginModel extends Model
     public string $email = "";
     public string $password = "";
 
-
     public function login()
     {
         echo '
