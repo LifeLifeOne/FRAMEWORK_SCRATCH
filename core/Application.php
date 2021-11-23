@@ -6,7 +6,7 @@ use App\Core\Router;
 use App\Core\Response;
 use App\Core\Connexion;
 
-class Application extends Connexion
+class Application
 {
     public static Application $app;
     public static string $ROOT_DIR;

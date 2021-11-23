@@ -3,7 +3,6 @@
 namespace App\Core;
 
 use App\core\Model;
-use Attribute;
 
 abstract class DbModel extends Model
 {
@@ -26,6 +25,8 @@ abstract class DbModel extends Model
         $statement->execute();
         return true;
     }
+
+
 
     public static function prepare($sql)
     {

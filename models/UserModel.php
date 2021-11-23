@@ -15,7 +15,7 @@ class UserModel extends DbModel
     public string $password = '';
     public string $confirmPassword = '';
 
-    public function tablename(): string
+    public function tableName(): string
     {
         return 'users';
     }
@@ -34,7 +34,7 @@ class UserModel extends DbModel
         return [
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
             'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8], [self::RULE_MAX, 'max' => 20]],
-            'confirmPassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']],
+            'confirmPassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']]
         ];
     }
 
