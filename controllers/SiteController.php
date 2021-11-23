@@ -15,7 +15,7 @@ class SiteController extends Controller
     public function welcome(): string
     {
         $params = [
-            "firstName" => "test 2"
+            "firstName" => "TEST"
         ];
 
         return $this->view('welcome', $params);
