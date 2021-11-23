@@ -7,7 +7,7 @@
     <article class="">
         <p class=""> Voici une rapide présentation des créateurs de ce magnifique blog!</p>
        <!-- <div class="container px-4 px-lg-5" style="width: 18rem;"> -->
-                <div class=" d-flex gap-5">
+                <div class=" d-flex gap-5 ">
                    <div class="post-preview text-center ">
                         <div class="card border-warning h-100 d-inline-block p-1" style="width: 18rem;">
                             <div class="card-header">
@@ -15,7 +15,6 @@
                                 <img src="asset/img/agrougrou.jpg" class="card-img-top "  style="width: 150px; height: auto"  alt="...">
                             </div>
                             <div class="card-body">
-
                                 <p class="card-text">Ses connaissances et sa maitrise de GitHUb ont fait de lui un veritable Scrum master de cet team. Toujours disponible pour les autres membres
                                 Sa bonne humeur communicative instaure une ambiance de travail très cool :) </p>
                             </div>

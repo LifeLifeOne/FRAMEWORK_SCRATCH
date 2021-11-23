@@ -11,7 +11,6 @@
 
 <div class="d-flex justify-content-center m-2">
     <button type="submit" class="btn btn-warning m-1">Register</button>
-
     <a href="/"  class="btn btn-danger m-1">Cancel</a>
 </div>
 <?php echo \app\core\form\Form::end() ?>
