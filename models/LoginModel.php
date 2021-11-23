@@ -19,7 +19,12 @@ class LoginModel extends Model
 
     public function login()
     {
-        echo 'success';
+        echo '
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Logged successfully !</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        ';
     }
 
     /**
