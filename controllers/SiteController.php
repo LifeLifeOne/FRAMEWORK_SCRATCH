@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\Request;
 use App\Core\Controller;
 use App\Core\Application;
+use App\Models\ContactModel;
 
 class SiteController extends Controller
 {
@@ -22,11 +23,28 @@ class SiteController extends Controller
     }
 
     /**
-     * @return string
+     * @param Request $request
+     * @return string|void
      */
-    public function contact(): string
+    public function contact(Request $request)
     {
-        return $this->view('contact');
+        $contactModel = new ContactModel();
+        if ($request->isPost()) {
+
+            $contactModel->loadData($request->getBody());
+
+            if ($contactModel->validate() && $contactModel->contact()) {
+                return 'success';
+            }
+
+            return $this->view('contact', [
+                'model' => $contactModel
+            ]);
+        }
+
+        return $this->view('contact', [
+            'model' => $contactModel
+        ]);
     }
 
     /**

@@ -22,7 +22,7 @@ class AuthController extends Controller
             $loginModel->loadData($request->getBody());
 
             if ($loginModel->validate() && $loginModel->login()) {
-                return $this->view('member');
+                return 'success';
             }
 
             return $this->view('login', [
