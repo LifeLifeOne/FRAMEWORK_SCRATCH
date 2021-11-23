@@ -47,10 +47,7 @@ class AuthController extends Controller
             $user->loadData($request->getBody());
 
             if ($user->validate() && $user->save()) {
-                unset($_POST);
-                return $this->view("login", [
-                    "model" => new UserModel()
-                ]);
+                return header('location: /login');
             }
         }
         return $this->view("register", [
