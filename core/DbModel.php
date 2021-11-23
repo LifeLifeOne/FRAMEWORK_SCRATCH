@@ -3,7 +3,6 @@
 namespace App\Core;
 
 use App\core\Model;
-use Attribute;
 
 abstract class DbModel extends Model
 {
@@ -23,6 +22,32 @@ abstract class DbModel extends Model
             $statement->bindValue(":$attribute", $this->{$attribute});
         }
 
+        $statement->execute();
+        return true;
+    }
+
+    public function login($data)
+    {
+        $tableName = $this->tableName();
+        $email = $data['email'];
+        $password = $data['password'];
+        $statement = self::prepare('SELECT email, password FROM ' . $tableName . ' WHERE email = ? ');
+        $statement->execute(array($email));
+        $user = $statement->fetch();
+        if ($user != false) {
+            $mdp = $user['password'];
+            if (password_verify($password, $mdp)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+    public function findAll()
+    {
+        $tableName = $this->tableName();
+        $statement = self::prepare("SELECT * FROM $tableName");
         $statement->execute();
         return true;
     }

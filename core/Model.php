@@ -27,12 +27,13 @@ abstract class Model
                 $this->{$key} = $value;
             }
         }
+        return $data;
     }
 
     /**
      * @return array
      */
-    abstract public function rules(): array;
+    abstract public function rules($data): array;
 
     /**
      * @var array
@@ -42,11 +43,10 @@ abstract class Model
     /**
      * @return bool
      */
-    public function validate(): bool
+    public function validate($data)
     {
-        foreach ($this->rules() as $attribute => $rules) {
+        foreach ($this->rules($data) as $attribute => $rules) {
             $value = $this->{$attribute};
-
             foreach ($rules as $rule) {
                 $ruleName = $rule;
                 if (!is_string($ruleName)) {
@@ -69,7 +69,6 @@ abstract class Model
                 }
             }
         }
-
         return empty($this->errors);
     }
 
@@ -82,7 +81,7 @@ abstract class Model
     {
         $message = $this->errorMessages()[$rule] ?? '';
         foreach ($params as $key => $value) {
-             $message = str_replace("{{$key}}", $value, $message);
+            $message = str_replace("{{$key}}", $value, $message);
         }
         $this->errors[$attribute][] = $message;
     }

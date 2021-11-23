@@ -15,7 +15,7 @@ class UserModel extends DbModel
     public string $password = '';
     public string $confirmPassword = '';
 
-    public function tablename(): string
+    public function tableName(): string
     {
         return 'users';
     }
@@ -26,16 +26,24 @@ class UserModel extends DbModel
         return parent::save();
     }
 
+    public function login($data)
+    {
+        return parent::login($data);
+    }
     /**
      * @return array[]
      */
-    public function rules(): array
+    public function rules($data): array
     {
-        return [
+        $attributes = [
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
             'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8], [self::RULE_MAX, 'max' => 20]],
-            'confirmPassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']],
         ];
+        if (array_key_exists('confirmPassword', $data)) {
+            $confirmPW = ['confirmPassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']]];
+            $attributes = array_merge($attributes, $confirmPW);
+        }
+        return $attributes;
     }
 
     public function attributes(): array
