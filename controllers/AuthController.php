@@ -16,23 +16,19 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        $loginModel = new LoginModel();
+        $user = new UserModel();
         if ($request->isPost()) {
 
-            $loginModel->loadData($request->getBody());
-
-            if ($loginModel->validate() && $loginModel->login()) {
-                return 'success';
+            $data = $user->loadData($request->getBody());
+            if ($user->validate($data) && $user->login($data)) {
+                return header('location: /member');
             }
-
-            return $this->view('login', [
-                'model' => $loginModel
-            ]);
         }
-
         return $this->view('login', [
-            'model' => $loginModel
+            'model' => $user
         ]);
+
+        //TODO => message d'erreur en cas de mauvaise saisie <3 vivien
     }
 
     /**
@@ -44,9 +40,9 @@ class AuthController extends Controller
         $user = new UserModel();
         if ($request->isPost()) {
 
-            $user->loadData($request->getBody());
+            $data = $user->loadData($request->getBody());
 
-            if ($user->validate() && $user->save()) {
+            if ($user->validate($data) && $user->save()) {
                 return header('location: /login');
             }
         }
