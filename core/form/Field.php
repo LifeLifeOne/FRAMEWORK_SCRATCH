@@ -32,15 +32,17 @@ class Field
     public function __toString()
     {
         return sprintf('
-        
-            <div class="form-group mb-2">
-                <label>%s</label>
-                <input type="%s" name="%s" value="%s" class="form-control %s">
-                <div class="invalid-feedback">
-                    %s
+        <div class="container d-flex justify-content-center">
+            <div class="form-group  w-50 ">
+                <div class="mb-3">
+                    <label>%s</label>
+                    <input type="%s" name="%s" value="%s" class="form-control %s">
+                    <div class="invalid-feedback">
+                        %s
+                    </div>
                 </div>
             </div>
-        
+        </div>    
         ',
             $this->attribute,
             $this->type,
