@@ -62,5 +62,4 @@ class Field
         return $this;
     }
 
-
 }

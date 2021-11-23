@@ -12,5 +12,7 @@
             "App\\": "./"
         }
     },
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }

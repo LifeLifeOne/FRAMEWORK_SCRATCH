@@ -2,31 +2,29 @@
 
 namespace App\models;
 
-use App\core\Request;
-use App\core\Controller;
-use App\core\Application;
+use App\Core\Request;
+use App\Core\Controller;
+use App\Core\Application;
 use App\core\Model;
 
-
 /**
- * Class LoginModel
- * @package App\models
+ * @params
  */
-class LoginModel extends Model
+class ContactModel extends Model
 {
+    public string $subject = "";
     public string $email = "";
-    public string $password = "";
+    public string $message = "";
 
 
-    public function login()
+    public function contact()
     {
         echo '
             <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-              <strong>Logged successfully !</strong>
+              <strong>Message send successfully !</strong>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         ';
-
     }
 
     /**
@@ -35,8 +33,9 @@ class LoginModel extends Model
     public function rules(): array
     {
         return [
+            'subject' => [self::RULE_REQUIRED],
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
-            'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8], [self::RULE_MAX, 'max' => 20]]
+            'message' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 10], [self::RULE_MAX, 'max' => 1000]]
         ];
     }
 }

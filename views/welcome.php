@@ -4,6 +4,7 @@
 
 
 <section class="container d-flex justify-content-center">
+    <hr class="my-4" />
     <article class="">
         <p class=""> Voici une rapide présentation des créateurs de ce magnifique blog!</p>
        <!-- <div class="container px-4 px-lg-5" style="width: 18rem;"> -->
@@ -20,7 +21,7 @@
                             </div>
                         </div>
                    </div>
-                    <!--<hr class="my-4" /> -->
+
                     <div class="post-preview text-center">
                         <div class="card border-danger h-100 d-inline-block p-1" style="width: 18rem;">
                             <div class="card-header">
