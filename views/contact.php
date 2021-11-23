@@ -1,4 +1,4 @@
-<h3 class="text-success text-center ">Contact us</h3>
+<h3 class="text-grey text-center ">Contact us</h3>
 <div class="container d-flex justify-content-center">
 
 
@@ -15,8 +15,8 @@
             <label for="message" class="form-label">Message</label>
             <textarea class="form-control bg-white" name="message" id="message"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="/"  class="btn btn-primary">Cancel</a>
+        <button type="submit" class="btn btn-warning">Submit</button>
+        <a href="/"  class="btn btn-danger">Cancel</a>
     </form>
 
 

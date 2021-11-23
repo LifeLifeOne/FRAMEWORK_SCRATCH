@@ -50,7 +50,7 @@
   <header class="masthead" style="background-image: url('asset/img/home-bg.jpg')">
   </header>
 
-  <main class="container py-3">
+  <main class="container py-3" style="min-height: 80vh">
     {{ content }}
   </main>
 
@@ -76,7 +76,7 @@
                           </a>
                       </li>
                       <li class="list-inline-item">
-                          <a href="#!">
+                          <a href="https://github.com/LifeLifeOne/FRAMEWORK_SCRATCH">
                               <span class="fa-stack fa-lg">
                                   <i class="fas fa-circle fa-stack-2x"></i>
                                   <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -84,7 +84,7 @@
                           </a>
                       </li>
                   </ul>
-                  <div class="small text-center text-muted fst-italic">Copyright &copy; Our Website 2021</div>
+                  <div class="small text-center text-muted fst-italic " >Copyright &copy; Our Website 2021</div>
               </div>
           </div>
       </div>
