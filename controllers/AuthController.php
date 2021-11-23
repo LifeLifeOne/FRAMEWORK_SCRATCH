@@ -22,7 +22,7 @@ class AuthController extends Controller
             $loginModel->loadData($request->getBody());
 
             if ($loginModel->validate() && $loginModel->login()) {
-                $loginModel->login();
+                return 'success';
             }
 
             return $this->view('login', [
@@ -59,5 +59,14 @@ class AuthController extends Controller
             'model' => $registerModel
         ]);
 
+    }
+
+    /**
+     * @param Request $request
+     * @return array|string|string[]
+     */
+    public function member(Request $request)
+    {
+        return $this->view('loginView');
     }
 }

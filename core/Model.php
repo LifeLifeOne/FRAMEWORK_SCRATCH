@@ -11,6 +11,8 @@ abstract class Model
 
     const RULE_REQUIRED = 'required';
     const RULE_EMAIL = 'email';
+    const RULE_SUBJECT = 'subject';
+    const RULE_MESSAGE = 'message';
     const RULE_MIN = 'min';
     const RULE_MAX = 'max';
     const RULE_MATCH = 'match';
