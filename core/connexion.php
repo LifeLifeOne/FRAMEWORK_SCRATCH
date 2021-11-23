@@ -2,11 +2,12 @@
 
 namespace App\Core;
 
-use PDO;
 use PDOException;
 
-class Connexion extends PDO
+class Connexion
 {
+
+    public \PDO $pdo;
 
     const HOST = 'localhost';
     const NAME = 'sfdrup03';
@@ -15,21 +16,23 @@ class Connexion extends PDO
 
     public function __construct()
     {
-
         $dsn = "mysql:dbname=" . self::NAME . ";host=" . self::HOST;
-
         try {
 
-            parent::__construct($dsn, self::USER, self::PASS);
-
-            $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->query("SET NAMES 'utf8'");
+            $this->pdo = new \PDO($dsn, self::USER, self::PASS);
+            $this->pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
+            $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            $this->pdo->query("SET NAMES 'utf8'");
             // echo 'Connection établie !';
 
         } catch (PDOException $e) {
 
             die("Erreur: " . $e->getMessage());
         }
+    }
+
+    public function prepare($sql): \PDOStatement
+    {
+        return $this->pdo->prepare($sql);
     }
 }

@@ -13,10 +13,9 @@ class LoginModel extends Model
     public string $email = "";
     public string $password = "";
 
-
     public function login()
     {
-       echo '
+        echo '
             <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
               <strong>Logged to your account</strong>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
