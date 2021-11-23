@@ -2,6 +2,9 @@
 
 namespace App\models;
 
+use App\Core\Request;
+use App\Core\Controller;
+use App\Core\Application;
 use App\core\Model;
 
 /**
@@ -16,12 +19,7 @@ class LoginModel extends Model
 
     public function login()
     {
-       echo '
-            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-              <strong>Logged to your account</strong>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        ';
+        echo 'success';
     }
 
     /**
